@@ -4,3 +4,7 @@ Initial setup:
 	python3 -m venv venv
 	source venv/bin/activate
 	pip3 install langgraph langchain-ollama langchain-community duckduckgo-search
+
+Keep Enchancements:
+
+  	pip3 install gkeepapi python-dotenv
