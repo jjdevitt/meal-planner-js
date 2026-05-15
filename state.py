@@ -1,7 +1,7 @@
 """Shared state definition for meal planner."""
 from typing import TypedDict, List
-
-
+ 
+# meal state schema
 class MealState(TypedDict):
     task: str
     keep_recipes: List[dict]

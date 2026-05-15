@@ -9,6 +9,8 @@ def explorer_node(state: MealState):
     query = "healthy 30-minute dinner recipes no processed foods fresh protein"
     results = search.run(query)
 
+    # extract recipes from search results
+
     print("[Explorer] Structuring web results as recipes...")
     prompt = f"""
     From these search results, extract 3 recipe ideas and format as JSON.

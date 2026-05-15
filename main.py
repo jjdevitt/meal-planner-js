@@ -3,6 +3,7 @@ from state import MealState
 from nodes import librarian_node, explorer_node, planner_node, sous_chef_node, supervisor
 
 # --- GRAPH SETUP ---
+# setup the graph and nodes
 builder = StateGraph(MealState)
 builder.add_node("supervisor", supervisor)
 builder.add_node("librarian", librarian_node)

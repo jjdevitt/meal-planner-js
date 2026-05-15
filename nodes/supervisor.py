@@ -3,6 +3,7 @@ from state import MealState
 
 
 def supervisor(state: MealState):
+    # decide next node based on state
     if not state.get("keep_recipes"):
         return {"next_step": "librarian"}
     if not state.get("internet_recipes"):

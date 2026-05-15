@@ -40,6 +40,8 @@ def planner_node(state: MealState):
     """
     response = llm.invoke(prompt)
 
+    # build final plan from recipes
+
     try:
         plan = json.loads(response)
         if not isinstance(plan, list):

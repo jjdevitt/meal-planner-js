@@ -6,6 +6,8 @@ from state import MealState
 def sous_chef_node(state: MealState):
     print("[Sous Chef] Creating recipe files...")
 
+    # write recipe files to meal_plans
+
     final_plan = state.get("final_plan", [])
 
     # Create meal_plans directory
