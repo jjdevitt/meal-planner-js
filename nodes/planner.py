@@ -9,8 +9,8 @@ def planner_node(state: MealState):
     keep = json.dumps(state["keep_recipes"], indent=2)
     web = json.dumps(state["internet_recipes"], indent=2)
 
-    print(f"local recipes: {keep}")
-    print(f"web recipes: {web}")
+    #print(f"local recipes: {keep}")
+    #print(f"web recipes: {web}")
 
     prompt = f"""
     You are a professional Meal Planner.

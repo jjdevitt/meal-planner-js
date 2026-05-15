@@ -11,7 +11,7 @@ def explorer_node(state: MealState):
 
     print("[Explorer] Structuring web results as recipes...")
     prompt = f"""
-    From these search results, extract 10 recipe ideas and format as JSON.
+    From these search results, extract 3 recipe ideas and format as JSON.
     Return a JSON array with objects containing: title, protein, ingredients (list), instructions (list)
     ingredients should be simple items with measurements for the recipe
     instructions should be concise steps that can be followed to make the recipe
