@@ -14,4 +14,6 @@ def supervisor(state: MealState):
         return {"next_step": "shopper"}
     if not state.get("recipe_files"):
         return {"next_step": "sous_chef"}
+    if not state.get("history_file"):
+        return {"next_step": "historian"}
     return {"next_step": "end"}

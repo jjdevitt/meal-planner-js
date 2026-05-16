@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2026-05-16T22:16:49.141114Z",
+    "plan": [
+      {
+        "title": "Stuffed Red Peppers",
+        "protein": "Ground beef",
+        "ingredients": [
+          "4 large red, orange or yellow bell peppers",
+          "2 tablespoons olive oil",
+          "1 cup celery",
+          "1 cup finely chopped yellow onion",
+          "3 garlic cloves, minced",
+          "1 teaspoon dried oregano",
+          "\u00bd teaspoon red-pepper flakes",
+          "1 pound ground beef",
+          "\u00be cup dry white wine/chicken broth",
+          "1 (14-ounce) can diced fire-roasted tomatoes",
+          "1 cup cooked white or brown rice",
+          "\u00bc cup grated Parmesan",
+          "2 tablespoons minced parsley",
+          "1 cup shredded mozzarella"
+        ],
+        "instructions": [
+          "Heat the oven to 400 degrees. Cut the peppers in half lengthwise and carefully remove core, seeds and ribs using a paring knife. Arrange the peppers, cut-sides up, in a 9-by-13-inch pan or other baking dish in which they fit snugly.",
+          "In a large (12-inch) skillet, heat the olive oil over medium. Add the fennel and onions and cook, stirring occasionally, until tender, 6 to 8 minutes. Stir in the garlic, oregano and red-pepper flakes, and cook until the garlic is fragrant, about 1 minute.",
+          "Add the beef and cook, breaking up the meat with a wooden spoon, for 3 to 5 minutes, until no longer pink.",
+          "Add \u00bd cup wine, increase the heat to medium-high and cook, scraping the bottom of the pan, until the liquid in the pan is reduced by about half.",
+          "Add the tomatoes and their juices, salt and pepper, and bring to a boil. Remove from the heat and stir in the rice, Parmesan and parsley, if using. Taste and adjust seasonings.",
+          "Divide the mixture among the peppers. Pour the remaining \u00bc cup wine into the bottom of the dish.",
+          "Wrap tightly with foil and bake for 35 to 40 minutes, until a paring knife easily pierces the peppers.",
+          "Remove the foil and spoon any juices that have accumulated in the bottom of the pan onto the peppers.",
+          "Sprinkle the mozzarella evenly onto the peppers and bake another 10 to 15 minutes, until the mozzarella is melted and beginning to brown. Allow the peppers to cool for 5 minutes, sprinkle with parsley, if using, and serve hot."
+        ]
+      },
+      {
+        "title": "One-Pot Pasta",
+        "protein": "Chicken",
+        "ingredients": [
+          "1 pound boneless chicken breast or thighs",
+          "8 oz pasta",
+          "2 tablespoons olive oil",
+          "1 onion, diced",
+          "2 cloves garlic, minced",
+          "1 cup marinara sauce"
+        ],
+        "instructions": [
+          "Cook pasta according to package instructions.",
+          "In a large skillet, cook chicken and vegetables in olive oil until cooked through."
+        ]
+      },
+      {
+        "title": "Garlic Parm Chicken Potato Skillet",
+        "protein": "Chicken breast",
+        "ingredients": [
+          "2 chicken breast",
+          "3 Russet potatoes",
+          "garlic salt, paprika, pepper",
+          "mozzarella",
+          "Grated Parmesan Cheese"
+        ],
+        "instructions": [
+          "Cube potatoes, toss with Oil, Salt, Pepper, Paprika - airfry at 400 for 30 minutes",
+          "Cube Chicken and cook in pan with butter (or oil), season with salt, pepper, paprika",
+          "combine in cooked potatoes, and cheese"
+        ]
+      }
+    ]
+  }
+]

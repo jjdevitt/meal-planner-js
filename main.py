@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, END
 from state import MealState
-from nodes import librarian_node, explorer_node, planner_node, sous_chef_node, supervisor, shopper_node
+from nodes import librarian_node, explorer_node, planner_node, sous_chef_node, supervisor, shopper_node, historian_node
 
 # --- GRAPH SETUP ---
 # setup the graph and nodes
@@ -10,15 +10,17 @@ builder.add_node("librarian", librarian_node)
 builder.add_node("explorer", explorer_node)
 builder.add_node("planner", planner_node)
 builder.add_node("shopper", shopper_node)
+builder.add_node("historian", historian_node)
 builder.add_node("sous_chef", sous_chef_node)
 
 builder.set_entry_point("supervisor")
 builder.add_conditional_edges("supervisor", lambda x: x["next_step"],
-                             {"librarian": "librarian", "explorer": "explorer", "planner": "planner", "shopper": "shopper", "sous_chef": "sous_chef", "end": END})
+                             {"librarian": "librarian", "explorer": "explorer", "planner": "planner", "shopper": "shopper", "historian": "historian", "sous_chef": "sous_chef", "end": END})
 builder.add_edge("librarian", "supervisor")
 builder.add_edge("explorer", "supervisor")
 builder.add_edge("planner", "supervisor")
 builder.add_edge("shopper", "supervisor")
+builder.add_edge("historian", "supervisor")
 builder.add_edge("sous_chef", "supervisor")
 
 graph = builder.compile()

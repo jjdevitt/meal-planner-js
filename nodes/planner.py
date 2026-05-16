@@ -3,7 +3,7 @@ import json
 from state import MealState
 from config import llm
 
-
+NUM_RECIPES = 3
 def planner_node(state: MealState):
     print("[Planner] Designing the meal plan...")
     keep = json.dumps(state["keep_recipes"], indent=2)
@@ -28,7 +28,7 @@ def planner_node(state: MealState):
     Select recipes and return as a JSON array
     Include the full recipe objects with title, protein, ingredients, and instructions.
     Return ONLY valid JSON array, no other text.
-    Pick 5 recipes that best fit the constraints and create a balanced meal plan for the week.
+    Pick {NUM_RECIPES} recipes that best fit the constraints and create a balanced meal plan for the week.
 
     Format:
     [

@@ -3,6 +3,7 @@ import json
 from state import MealState
 from config import llm, search
 
+NUM_RECIPES = 1
 
 def explorer_node(state: MealState):
     print("[Explorer] Searching web...")
@@ -13,7 +14,7 @@ def explorer_node(state: MealState):
 
     print("[Explorer] Structuring web results as recipes...")
     prompt = f"""
-    From these search results, extract 3 recipe ideas and format as JSON.
+    From these search results, extract {NUM_RECIPES} recipe ideas and format as JSON.
     Return a JSON array with objects containing: title, protein, ingredients (list), instructions (list)
     ingredients should be simple items with measurements for the recipe
     instructions should be concise steps that can be followed to make the recipe

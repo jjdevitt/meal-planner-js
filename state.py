@@ -10,4 +10,5 @@ class MealState(TypedDict, total=False):
     recipe_files: List[str]
     grocery_list: List[str]
     grocery_file: str
+    history_file: str
     next_step: str
