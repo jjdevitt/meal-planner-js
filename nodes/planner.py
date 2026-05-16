@@ -22,10 +22,8 @@ def planner_node(state: MealState):
     {web}
 
     CONSTRAINTS:
-    1. No processed foods
-    2. avoid repeating proteins
-    3. Under 30 mins per recipe
-    4. Only use the local and web recipes provided, do NOT invent new ones.
+    1. Avoid repeating proteins
+    2. Only use the local and web recipes provided, do NOT invent new ones.
 
     Select recipes and return as a JSON array
     Include the full recipe objects with title, protein, ingredients, and instructions.

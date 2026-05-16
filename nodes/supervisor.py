@@ -10,6 +10,8 @@ def supervisor(state: MealState):
         return {"next_step": "explorer"}
     if not state.get("final_plan"):
         return {"next_step": "planner"}
+    if not state.get("grocery_list"):
+        return {"next_step": "shopper"}
     if not state.get("recipe_files"):
         return {"next_step": "sous_chef"}
     return {"next_step": "end"}

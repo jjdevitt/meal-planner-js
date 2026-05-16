@@ -1,2 +1,3 @@
-/meal_plans
-/__pycache__
+meal_plans
+__pycache__
+nodes/__pycache__

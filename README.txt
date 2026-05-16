@@ -3,6 +3,7 @@ Agents that plan a meal week:
  librarian - goes through known/stored recipies in a json database 
  explorer - uses DDG to search the internet and llm to generate recipiies
  planner (llm) - merges the previous two recipes and makes selections
+ shopper - makes a grocery list from the final meal plan
  sous_chef - writes individual recipes out to the filesystem
 
 # pre-steps
@@ -22,6 +23,8 @@ ensure recipes.json exists in project root
 create meal_plans directory or let the program create it
 
 run the planner
+
+a grocery list is saved to meal_plans/grocery_list.txt
 
 python main.py
 
