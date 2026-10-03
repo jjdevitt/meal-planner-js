@@ -1,0 +1,53 @@
+{
+  "name": "meal-planner",
+  "version": "1.0.0",
+  "description": "Multi-agent weekly meal planner powered by Ollama, with an Electron desktop UI",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "cli": "node ./src/cli.js",
+    "search-test": "node ./scripts/search-test.js",
+    "test": "node --test \"test/*.test.js\"",
+    "dist": "electron-builder"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "@langchain/core": "1.2.14",
+    "@langchain/langgraph": "1.4.18",
+    "@langchain/ollama": "1.3.0",
+    "duck-duck-scrape": "2.2.7"
+  },
+  "devDependencies": {
+    "electron": "44.3.0",
+    "electron-builder": "26.16.1"
+  },
+  "build": {
+    "appId": "com.jjdevitt.mealplanner",
+    "productName": "Meal Planner",
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "recipes.json",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
