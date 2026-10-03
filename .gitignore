@@ -1,3 +1,4 @@
-meal_plans
-__pycache__
-nodes/__pycache__
+node_modules/
+meal_plans/
+dist/
+.DS_Store

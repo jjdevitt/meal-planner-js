@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:" />
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">MP</span>
+        <div>
+          <h1>Meal Planner</h1>
+          <p class="subtitle">A team of local Ollama agents plans your week</p>
+        </div>
+      </div>
+      <button id="ollama-status" class="status-pill" title="Click to re-check Ollama">
+        <span class="dot"></span><span id="ollama-status-text">Checking Ollama…</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- Step 1: preferences -->
+      <section id="setup-view" class="view">
+        <form id="prefs-form" class="card prefs-card">
+          <h2>Tell the planner what you like</h2>
+          <p class="muted">This context is shared with every agent before they start working.</p>
+
+          <div class="grid">
+            <label>
+              <span>Diet</span>
+              <select name="diet">
+                <option value="">No preference</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>Pescatarian</option>
+                <option>Low-carb / Keto</option>
+                <option>Gluten-free</option>
+                <option>Dairy-free</option>
+                <option>Mediterranean</option>
+                <option>High-protein</option>
+              </select>
+            </label>
+            <label>
+              <span>Meals to plan</span>
+              <input name="numMeals" type="number" min="1" max="7" value="3" />
+            </label>
+            <label>
+              <span>Max cooking time</span>
+              <select name="maxMinutes">
+                <option value="">Any</option>
+                <option value="15">15 minutes</option>
+                <option value="30" selected>30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">1 hour</option>
+              </select>
+            </label>
+            <label>
+              <span>Favorite cuisines</span>
+              <input name="cuisines" type="text" placeholder="e.g. Thai, Mexican, Italian" />
+            </label>
+            <label class="wide">
+              <span>Allergies / ingredients to avoid</span>
+              <input name="avoid" type="text" placeholder="e.g. peanuts, shellfish, mushrooms" />
+            </label>
+            <label class="wide">
+              <span>Anything else?</span>
+              <textarea name="notes" rows="3" placeholder="e.g. Cooking for two, kid-friendly, want leftovers for lunch"></textarea>
+            </label>
+          </div>
+
+          <details class="settings">
+            <summary>Ollama settings</summary>
+            <div class="grid">
+              <label>
+                <span>Model</span>
+                <input name="model" type="text" placeholder="llama3" />
+              </label>
+              <label>
+                <span>Ollama URL</span>
+                <input name="baseUrl" type="text" placeholder="http://127.0.0.1:11434" />
+              </label>
+            </div>
+          </details>
+
+          <div class="actions">
+            <button type="submit" id="start-btn" class="primary">Plan my meals</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Step 2: live run + results -->
+      <section id="run-view" class="view hidden">
+        <div class="run-header card">
+          <div>
+            <div class="eyebrow">Now working</div>
+            <div id="now-working" class="now-working">Starting…</div>
+            <div id="prefs-summary" class="muted small"></div>
+          </div>
+          <div class="run-actions">
+            <span id="elapsed" class="muted small"></span>
+            <button id="cancel-btn" class="danger">Cancel</button>
+            <button id="restart-btn" class="primary hidden">Plan again</button>
+          </div>
+        </div>
+
+        <div class="run-grid">
+          <aside class="card">
+            <h3>Agents</h3>
+            <ol id="agent-list" class="agent-list"></ol>
+          </aside>
+
+          <section class="card log-card">
+            <div class="log-header">
+              <h3>Activity</h3>
+              <label class="small muted"><input type="checkbox" id="show-llm" checked /> Show live LLM output</label>
+            </div>
+            <div id="log" class="log"></div>
+          </section>
+        </div>
+
+        <section id="results" class="hidden">
+          <div class="results-grid">
+            <div class="card">
+              <h3>Meal plan</h3>
+              <div id="plan-list" class="plan-list"></div>
+            </div>
+            <div class="card">
+              <div class="log-header">
+                <h3>Grocery list</h3>
+                <button id="open-grocery" class="link hidden">Open file</button>
+              </div>
+              <ul id="grocery-list" class="grocery-list"></ul>
+              <h3 class="spaced">Files</h3>
+              <ul id="file-list" class="file-list"></ul>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
